@@ -5,6 +5,10 @@ header
   box-styling: border-box;
 }
 
+body{
+  font-family: "helvetica", sans-serif;
+}
+
 .header-wrapper{
   background-color: #e5e5e5;
   PADDING: .5% 15% 1% 15%;
@@ -12,7 +16,6 @@ header
 .header-wrapper a{
   text-decoration: none;
   color:#333;
-  font-family: "helvetica", sans-serif;
   font-size: .8em;
   font-weight: bold;
   margin: 0 .75%;
@@ -23,24 +26,92 @@ main body
 **********************************************/
 .user-wrapper{
   margin: 0 15%;
+  border-style:none;
+  border-color:lightgrey;
+  border-width: thin;
+  width: 17%;
 }
 
 .user-info{
-  width: 25%;
+  border-style:none;
+  border-color:red;
+  border-width: thin;
 }
 .user-info img{
   width: 100%;
-  margin: 10% 0;
+  margin: 5% 0;
   border-radius: .5em;
 }
 
+.user-info h1{
+  font-size:1.75em;
+  font-weight: bold;
+  margin:0;
+  border-style:none;
+  border-color:lightgrey;
+  border-width: thin;
+}
 
+.user-info h3{
+  margin:0;
+  color:grey;
+  font-size:1.2em;
+  font-weight:200;
+  margin-top: 2%;
+  padding-bottom:4%;
+  padding-left:1%;
+  border-bottom:solid;
+  border-bottom-color:lightgrey;
+  border-bottom-width:thin;
+}
 
+.info{
+  font-weight: 400;
+  font-size: .90em;
+  padding: 2% 0;
+}
 
+.organization{
+  margin-top:4%;
+}
+.user-info .octicon{
+  color:grey;
+  padding-right:.3em;
+}
 
+.follow-info{
+  border-top:solid;
+  border-bottom:solid;
+  border-color:lightgrey;
+  border-width:thin;
+  text-align: center;
 
+}
 
+.followers{
+  display: inline-block;
+}
 
+.starred{
+  display: inline-block;
+  margin:5% 10%;
+
+}
+
+.following{
+  display: inline-block;
+}
+
+.follow-info h2{
+  color:#4078C0;
+  font-size:1.75em;
+  font-weight: 600;
+}
+
+.follow-info p{
+  color:grey;
+  font-size: .65em;
+}
 
 
 
