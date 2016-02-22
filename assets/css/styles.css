@@ -1,0 +1,66 @@
+/**********************************************
+header
+**********************************************/
+*{
+  box-styling: border-box;
+}
+
+.header-wrapper{
+  background-color: #e5e5e5;
+  PADDING: .5% 15% 1% 15%;
+}
+.header-wrapper a{
+  text-decoration: none;
+  color:#333;
+  font-family: "helvetica", sans-serif;
+  font-size: .8em;
+  font-weight: bold;
+  margin: 0 .75%;
+}
+
+/**********************************************
+main body
+**********************************************/
+.user-wrapper{
+  margin: 0 15%;
+}
+
+.user-info{
+  width: 25%;
+}
+.user-info img{
+  width: 100%;
+  margin: 10% 0;
+  border-radius: .5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************
+
+**********************************************/
