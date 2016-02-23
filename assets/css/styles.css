@@ -161,7 +161,7 @@ main info section
   display: block;
   padding: 0 0 2% 0;
   border-style: solid;
-  border-bottom: thin solid lightgrey;
+  /*border-bottom: thin solid lightgrey;*/
   /*border-color: blue;
   border-width: thin;*/
 
@@ -173,9 +173,9 @@ main info section
   margin: 0 0 0 0;
   color: black;
   padding: 1em 1em 1em 1em;
-  border-style:none;
+
   border-radius:3px 3px 0px 0px;
-  border-bottom-style: solid;
+  border-bottom: thin solid lightgrey;
   /*border-color: lightgrey;
   border-width: thin;*/
 }
@@ -187,10 +187,8 @@ main info section
 .left-header-btns{
   display: block;
   float: right;
-  /*margin: 1% 1% 1% 2%;*/
-  border-style: none;
-  border-color: blue;
-  border-width: thin;
+  padding: 0 0 .4% 39%;
+  border-bottom: solid thin lightgrey;
 }
 
 .follow-btn{
@@ -319,7 +317,7 @@ main info section
 /*-----------THIS-IS-THE-TAB-FUNCTIONALITY-----------*/
 /*****************************************************/
 
-.show {
+.clicked{
   border:solid thin lightgrey;
   border-bottom:none;
 }
