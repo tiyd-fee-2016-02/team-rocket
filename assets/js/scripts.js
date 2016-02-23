@@ -3,5 +3,5 @@
 //   $( this ).addClass( "clicked" );
 // });
 // console.log("hello");
-$(".contributions-block").addClass(".display");
-$(".contributions-block").hide();
+// $(".contributions-block").addClass(".display");
+// $(".contributions-block").hide();

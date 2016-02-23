@@ -16,7 +16,7 @@ header{
 }
 
 .header-wrapper{
-  width:1000px;
+  width:99%;
   margin:0 auto;
 }
 
@@ -28,16 +28,21 @@ header{
   margin: 0 .75%;
 }
 
+.header-wrapper input{
+  width: 30%;
+  line-height: 2em;
+}
+
 
 /**********************************************
 user info section
 **********************************************/
 .user-wrapper{
   margin: 0 10%;
-  border-style:none;
+  border-style:solid;
   border-color:red;
   border-width: thin;
-  width:1000px;
+  width:80%;
   margin:0 auto;
 }
 
@@ -95,7 +100,7 @@ user info section
 
 .follow-info{
   border-top:solid;
-  border-bottom:none;
+  border-bottom:solid;
   border-color:lightgrey;
   border-width:thin;
   text-align: center;
@@ -133,55 +138,46 @@ user info section
 /**********************************************
 main info section
 **********************************************/
-/*.user-whitespace{
+.user-whitespace{
   float: left;
   display: inline-block;
   width: 1.5%;
-  border-style: solid;
-  border-color: red;
-  border-width: thin;
-}*/
+}
 .user-main{
   float:left;
   display: inline-block;
   width: 78%;
   margin-left:1em;
   /*margin: 0 2%;*/
-  border-style: none;
+  /*border-style: none;
   border-color: blue;
-  border-width: thin;
+  border-width: thin;*/
   margin-top:1em;
 
 
 }
 
 .user-main-header-wrap{
-  /*margin: 2% 0;*/
-  border-style: none;
+  display: block;
+  padding: 0 0 2% 0;
+  border-style: solid;
   border-bottom: thin solid lightgrey;
-  border-color: blue;
-  border-width: thin;
+  /*border-color: blue;
+  border-width: thin;*/
 
 }
 
-.the-tabs{
-  border-style: none;
-  border-color: green;
-  border-width: thin;
-  padding-top:.5em;
-  padding-bottom:1.8em;
-}
 
 .tab{
   display:inline;
-  /*margin: 1% 2%;*/
+  margin: 0 0 0 0;
   color: black;
-  padding: .5em 1em;
+  padding: 2em 1em;
   border-style:none;
   border-radius:3px 3px 0px 0px;
   border-bottom-style: solid;
-  border-color: lightgrey;
-  border-width: thin;
+  /*border-color: lightgrey;
+  border-width: thin;*/
 }
 
 .tab a{
@@ -203,13 +199,13 @@ main info section
   color: white;
   padding:.45em .6em;
   /*padding: 4% 8%;*/
-  /*margin: -20% 2% 0 2%;*/
+  margin: -20% 0 0 0;
   border-radius: 2px;
   border: thin solid grey;
   font-size: .8em;
   font-weight: 600;
 }
-.follow-btn A{
+.follow-btn a{
   color: white;
 }
 .octicon-person{
@@ -218,7 +214,7 @@ main info section
 
 .exclamation-drop{
   background-color: lightgray;
-  padding:.4em .6em;
+  padding:.4em .2em;
   border-radius: .5em;
   border: thin solid grey;
   display: inline-block;
@@ -240,7 +236,7 @@ main info section
 
 
 .contributions-block{
-  /*display: none;*/
+  margin: 4% 0 0 0;
   border-style:solid;
   border-color:lightgrey;
   border-width:thin;
@@ -323,8 +319,8 @@ main info section
 /*-----------THIS-IS-THE-TAB-FUNCTIONALITY-----------*/
 /*****************************************************/
 
-.clicked{
-  border-style:solid;
+.show{
+  border-style:solid thin grey;
   border-bottom:none;
 }
 
