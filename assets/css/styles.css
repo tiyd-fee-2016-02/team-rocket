@@ -11,7 +11,7 @@ body{
 }
 
 header{
-  background-color: #e5e5e5;
+  background-color: #F5F5F5;
   padding: .5% 10% .5% 10%;
 }
 
@@ -209,11 +209,12 @@ main info section
 }
 
 .exclamation-drop{
-  background-color: lightgray;
+  background-color: #F5F5F5;
   padding:.4em .2em;
   border-radius: .5em;
   border: thin solid grey;
   display: inline-block;
+  margin: -2% 0 2% 0;
 }
 
 .exclamation-drop a{
@@ -239,6 +240,7 @@ main info section
   font-size:.9em;
   font-weight: 800;
   border-radius:4px;
+  line-height: 1.3em;
 }
 
 .popular-repositories{
