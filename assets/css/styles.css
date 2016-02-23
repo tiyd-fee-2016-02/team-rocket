@@ -39,9 +39,9 @@ user info section
 **********************************************/
 .user-wrapper{
   margin: 0 10%;
-  border-style:solid;
+  /*border-style:solid;
   border-color:red;
-  border-width: thin;
+  border-width: thin;*/
   width:80%;
   margin:0 auto;
 }
@@ -172,7 +172,7 @@ main info section
   display:inline;
   margin: 0 0 0 0;
   color: black;
-  padding: 2em 1em;
+  padding: 1em 1em 1em 1em;
   border-style:none;
   border-radius:3px 3px 0px 0px;
   border-bottom-style: solid;
@@ -319,8 +319,8 @@ main info section
 /*-----------THIS-IS-THE-TAB-FUNCTIONALITY-----------*/
 /*****************************************************/
 
-.show{
-  border-style:solid thin grey;
+.show {
+  border:solid thin lightgrey;
   border-bottom:none;
 }
 
