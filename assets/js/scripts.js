@@ -1,7 +1,20 @@
-// $( ".contributions" ).click(function() {
-//   $(".tab").removeClass("clicked");
-//   $( this ).addClass( "clicked" );
-// });
-// console.log("hello");
-// $(".contributions-block").addClass(".display");
-// $(".contributions-block").hide();
+$(document).ready(function(){
+  'use strict';
+  $( ".contributions" ).click(function() {
+    $(".tab").removeClass("clicked");
+    $( this ).addClass( "clicked" );
+    $(".contributions-block").show();
+  });
+  $(".repos").click(function(){
+    $(".tab").removeClass("clicked");
+    $( this ).addClass( "clicked" );
+    $(".contributions-block").show();
+  });
+  $(".public").click(function(){
+    $(".tab").removeClass("clicked");
+    $( this ).addClass( "clicked" );
+    $(".contributions-block").show();
+  });
+
+
+});
