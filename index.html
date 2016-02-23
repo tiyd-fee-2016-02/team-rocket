@@ -7,8 +7,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
 <link href="./assets/octicons/octicons.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<link href="assets/css/styles.css" rel="stylesheet">
-<link href="/Users/alexanderallis/Desktop/styles.css" rel="stylesheet">
+<link href="./assets/css/styles.css" rel="stylesheet">
+<!-- <link href="/Users/alexanderallis/Desktop/styles.css" rel="stylesheet"> -->
 
 </head>
 <body>
@@ -26,122 +26,172 @@
   <article>
     <div class="user-wrapper">
       <div class="user-info">
-        <img src="./assets/img/octocat.jpeg" alt="octocat"></img>
-        <h1>The Octocat</h1>
-        <h3>octocat</h3>
-        <div class="info organization">
-          <span class="octicon octicon-organization"></span>
-          GitHub
-        </div>
-        <div class="info location">
-          <span class="octicon octicon-location"></span>
-          SanFrancisco
-        </div>
-        <div class="info email">
-          <span class="octicon octicon-mail"></span>
-          octocat@github.com
-        </div>
-        <div class="info link">
-          <span class="octicon octicon-link"></span>
-          http://github.com/blog
-        </div>
-        <div class="info joined">
-          <span class="octicon octicon-clock"></span>
-          Joined on Jan 25, 2011
-        </div>
-        <div class="follow-info">
-          <span class="followers"><h2 class="">1.3k</h2><p>Followers</p></span>
-          <span class="starred"><h2 class="">2</h2><p>Starred</p></span>
-          <span class="following"><h2 class="">6</h2><p>Following</p></span>
-        </div>
+
+          <img src="./assets/img/octocat.jpeg" alt="octocat"></img>
+          <h1>The Octocat</h1>
+          <h3>octocat</h3>
+          <div class="info organization">
+            <span class="octicon octicon-organization"></span>
+            GitHub
+          </div>
+          <div class="info location">
+            <span class="octicon octicon-location"></span>
+            SanFrancisco
+          </div>
+          <div class="info email">
+            <span class="octicon octicon-mail"></span>
+            octocat@github.com
+          </div>
+          <div class="info link">
+            <span class="octicon octicon-link"></span>
+            http://github.com/blog
+          </div>
+          <div class="info joined">
+            <span class="octicon octicon-clock"></span>
+            Joined on Jan 25, 2011
+          </div>
+          <div class="follow-info">
+            <span class="followers"><h2 class="">1.3k</h2><p>Followers</p></span>
+            <span class="starred"><h2 class="">2</h2><p>Starred</p></span>
+            <span class="following"><h2 class="">6</h2><p>Following</p></span>
+          </div>
+
       </div>
-      <div class="user-whitespace">&nbsp;</div>
+
+
+      <!-- <div class="user-whitespace">&nbsp;</div> -->
       <div class="user-main">
-        <div class="user-main-header-wrap">
-        <div class="tab contributions"><span class="octicon octicon-diff-added"></span><a href="#">
-Contributions</a></div>
-        <div class="tab repos"><span class="octicon octicon-repo"></span><a href="#">Repositories</a></div>
-        <div class="tab public"><span class="octicon octicon-rss"></span><a href="#">Public activity</a></div>
-        <div class="left-header-btns">
-          <span class="follow-btn"><a href="#"><span class="octicon octicon-person"></span>&nbsp;Follow</span></a>
-          <span class="exclamation-drop"><a href="#"><span class="octicon octicon-stop"></span><span class="octicon octicon-triangle-down"></span></a> </span><span>&nbsp;</span>
-        </div>
-      </div>
+          <div class="the-tabs">
+            <!-- <div class="user-main-header-wrap"> -->
+            <div class="tab contributions">
+              <!-- <span class="octicon octicon-diff-added">
+              </span> -->
+              <!-- <a href="#"> -->
+                Contributions
+              <!-- </a> -->
+            </div>
+            <div class="tab repos">
+              <!-- <span class="octicon octicon-repo">
+              </span> -->
+              <!-- <a href="#"> -->
+                Repositories
+              <!-- </a> -->
+            </div>
+            <div class="tab public">
+              <!-- <span class="octicon octicon-rss">
+              </span> -->
+              <!-- <a href="#"> -->
+                Public activity
+              <!-- </a> -->
+            </div>
+
+            <div class="left-header-btns">
+
+              <div class="follow-btn">
+                <a href="#">
+                  <span class="octicon octicon-person"></span>
+                  Follow
+                </a>
+              </div>
+
+              <div class="exclamation-drop">
+                <a href="#">
+                  <span class="octicon octicon-stop">
+                  </span>
+                  <span class="octicon octicon-triangle-down">
+                  </span>
+                </a>
+              </div>
+              <!-- <span>
+                &nbsp;
+              </span> -->
+            </div>
+
+          </div>
+
+
+
+          <!-- *****************************************************
+                      -THIS-IS-THE-CONTRIBUTIONS-BLOCK-
+          ***************************************************** -->
+
+            <div class="contributions-block">
+
+              <div class="popular-repositories">
+                <h2>Popular Repositories</h2>
+              </div>
+
+              <div class="repository">
+                <span class="octicon octicon-repo"></span>
+                  <span class="repo-text">
+                    <a href="#">Spoon-Knife</a>
+                    <p>
+                      This repo is for demonstration purposes only.
+                    </p>
+                  </span>
+                  <div class="stars">
+                    <div class="num-stars">1409</div>
+                    <div class="octicon octicon-star"></div>
+                  </div>
+              </div>
+
+              <div class="repository">
+                <span class="octicon octicon-repo"></span>
+                  <span class="repo-text">
+                    <a href="#">Hello-World</a>
+                    <p>
+                      This repo is for demonstration purposes only.
+                    </p>
+                  </span>
+                  <span class="stars">
+                    <div class="num-stars">14</div>
+                    <div class="octicon octicon-star"></div>
+                  </span>
+              </div>
+
+              <div class="repository">
+                <span class="octicon octicon-repo"></span>
+                  <span class="repo-text">
+                    <a href="#">Spoon-Knife</a>
+                    <p>
+                      This repo is for demonstration purposes only.
+                    </p>
+                  </span>
+                  <span class="stars">
+                    <div class="num-stars">11</div>
+                    <div class="octicon octicon-star"></div>
+                  </span>
+              </div>
+
+              <div class="repository">
+                <span class="octicon octicon-repo"></span>
+                  <span class="repo-text">
+                    <a href="#">Spoon-Knife</a>
+                    <p>
+                      This repo is for demonstration purposes only.
+                    </p>
+                  </span>
+                  <span class="stars">
+                    <div class="num-stars">6</div>
+                    <div class="octicon octicon-star"></div>
+                  </span>
+              </div>
+
+            </div>
+
+
+      <!-- </div> -->
 </div>
 
 
-
-  <div class="contributions-block">
-
-    <div class="popular-repositories">
-      <h2>Popular Repositories</h2>
-    </div>
-
-    <div class="repository">
-      <span class="octicon octicon-repo"></span>
-        <span class="repo-text">
-          <a href="#">Spoon-Knife</a>
-          <p>
-            This repo is for demonstration purposes only.
-          </p>
-        </span>
-        <div class="stars">
-          <div class="num-stars">1409</div>
-          <div class="octicon octicon-star"></div>
-        </div>
-    </div>
-
-    <div class="repository">
-      <span class="octicon octicon-repo"></span>
-        <span class="repo-text">
-          <a href="#">Hello-World</a>
-          <p>
-            This repo is for demonstration purposes only.
-          </p>
-        </span>
-        <span class="stars">
-          <div class="num-stars">14</div>
-          <div class="octicon octicon-star"></div>
-        </span>
-    </div>
-
-    <div class="repository">
-      <span class="octicon octicon-repo"></span>
-        <span class="repo-text">
-          <a href="#">Spoon-Knife</a>
-          <p>
-            This repo is for demonstration purposes only.
-          </p>
-        </span>
-        <span class="stars">
-          <div class="num-stars">11</div>
-          <div class="octicon octicon-star"></div>
-        </span>
-    </div>
-
-    <div class="repository">
-      <span class="octicon octicon-repo"></span>
-        <span class="repo-text">
-          <a href="#">Spoon-Knife</a>
-          <p>
-            This repo is for demonstration purposes only.
-          </p>
-        </span>
-        <span class="stars">
-          <div class="num-stars">6</div>
-          <div class="octicon octicon-star"></div>
-        </span>
-    </div>
-
-
-
-
-  </div>
 
 
 
     </div>
   </article>
-  <footer></footer>
+
+  <script src="./assets/js/scripts.js"></script>
+
 </body>
+<footer></footer>
 </html>
