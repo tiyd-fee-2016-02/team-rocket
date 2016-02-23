@@ -313,6 +313,101 @@ main info section
   border-width:thin;
 }
 
+
+/*****************************************************/
+/*----------THIS-IS-THE-REPOSITORIES-THING----------*/
+/*****************************************************/
+.repo-block{
+  margin: 4% 0 0 0;
+  border-style:none;
+  border-color:lightgrey;
+  border-width:thin;
+  font-size:.9em;
+  font-weight: 800;
+  border-radius:4px;
+  line-height: 1.3em;
+}
+
+.find-repositories{
+  background-color:none;
+  display:inline-block;
+  width:100%;
+  border-bottom: solid thin lightgrey;
+}
+
+
+.repository-right{
+  float:right;
+  display:inline-block;
+}
+
+.repository-right div {
+  display: inline-block;
+  float:right;
+}
+
+.repository{
+  border-bottom:solid thin lightgrey;
+  border-top:none;
+  font-size: 1.35em;
+  padding:1.5em 0 ;
+}
+
+.repository p {
+  font-size:.75em;
+}
+
+.repository h3 {
+  font-size:.65em;
+  color:grey;
+  font-weight:200;
+}
+
+/*****************************************************/
+/*----------THIS-IS-THE-PUBLIC-THING----------*/
+/*****************************************************/
+
+.public-block{
+  margin: 4% 0 0 0;
+  border-style:none;
+  border-color:lightgrey;
+  border-width:thin;
+  font-size:.9em;
+  font-weight: 800;
+  border-radius:4px;
+  line-height: 1.3em;
+}
+
+.public-sub{
+  text-align:center;
+  background-color:whitesmoke;
+  border-radius:5px;
+  display:inline-block;
+  width:100%;
+  border: solid thin lightgrey;
+  min-height: 100px;
+}
+
+.public-block span{
+  float:right;
+  margin-top:-15px;
+  margin-right:-2px;
+  background-color: orange;
+  padding:2px 4px;
+  color:white;
+  border-radius: 2px;
+
+}
+
+.public-sub div {
+  border:none thin red;
+  display:inline-block;
+  padding-top:40px;
+}
+
+
+
+
 /*****************************************************/
 /*-----------THIS-IS-THE-TAB-FUNCTIONALITY-----------*/
 /*****************************************************/

@@ -18,3 +18,6 @@ $(document).ready(function(){
 
 
 });
+
+  $( ".contributions-block" ).hide();
+  $( ".repo-block" ).hide();
