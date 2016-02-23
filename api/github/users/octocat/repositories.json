@@ -85,7 +85,12 @@
     "forks": 14,
     "open_issues": 3,
     "watchers": 6,
-    "default_branch": "master"
+    "default_branch": "master",
+    "permissions": {
+      "admin": false,
+      "push": false,
+      "pull": true
+    }
   },
   {
     "id": 20978623,
@@ -173,7 +178,12 @@
     "forks": 26,
     "open_issues": 1,
     "watchers": 14,
-    "default_branch": "master"
+    "default_branch": "master",
+    "permissions": {
+      "admin": false,
+      "push": false,
+      "pull": true
+    }
   },
   {
     "id": 1296269,
@@ -261,7 +271,12 @@
     "forks": 1114,
     "open_issues": 154,
     "watchers": 1409,
-    "default_branch": "master"
+    "default_branch": "master",
+    "permissions": {
+      "admin": false,
+      "push": false,
+      "pull": true
+    }
   },
   {
     "id": 17881631,
@@ -349,7 +364,12 @@
     "forks": 22,
     "open_issues": 6,
     "watchers": 11,
-    "default_branch": "master"
+    "default_branch": "master",
+    "permissions": {
+      "admin": false,
+      "push": false,
+      "pull": true
+    }
   },
   {
     "id": 1300192,
@@ -417,7 +437,7 @@
     "deployments_url": "https://api.github.com/repos/octocat/Spoon-Knife/deployments",
     "created_at": "2011-01-27T19:30:43Z",
     "updated_at": "2016-02-23T05:28:33Z",
-    "pushed_at": "2016-02-23T17:34:22Z",
+    "pushed_at": "2016-02-23T20:52:03Z",
     "git_url": "git://github.com/octocat/Spoon-Knife.git",
     "ssh_url": "git@github.com:octocat/Spoon-Knife.git",
     "clone_url": "https://github.com/octocat/Spoon-Knife.git",
@@ -431,12 +451,17 @@
     "has_downloads": true,
     "has_wiki": true,
     "has_pages": false,
-    "forks_count": 79601,
+    "forks_count": 79603,
     "mirror_url": null,
-    "open_issues_count": 7217,
-    "forks": 79601,
-    "open_issues": 7217,
+    "open_issues_count": 7218,
+    "forks": 79603,
+    "open_issues": 7218,
     "watchers": 9933,
-    "default_branch": "master"
+    "default_branch": "master",
+    "permissions": {
+      "admin": false,
+      "push": false,
+      "pull": true
+    }
   }
 ]

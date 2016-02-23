@@ -23,25 +23,24 @@ $(document).ready(function(){
   });
 
 
-   $.getJSON( "https://api.github.com/users/bestmattever", function( json ) {
+   $.getJSON( "https://api.github.com/users/octocat", function( json ) {
+     var time = new Date(json.created_at).toLocaleDateString();
+
+      $(".usr-img").append('<img src="'+json.avatar_url+'" alt="avatar"></img>')
       $(".my-name").html(json.name);
       $(".user-name").html(json.login);
       $(".organization").html(json.company);
       $(".location").html( json.location );
       $(".email").html(json.email);
       $(".link").html(json.html_url);
-      $(".joined").html(json.created_at);
+      $(".joined").html(time);
       $(".follows").html(json.followers);
-      $(".starrrrred").html(json.starred_url);
+      // $(".starrrrred").html(json.starred_url);
       $(".followingg").html(json.following);
    });
-  // console.log()
 
-  // , function(data){
-  //
-  // })
+   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+     
+   })
+
 });
-
-  // $( ".contributions-block" ).hide();
-  // $( ".repo-block" ).hide();
-  // $(".public-block").hide();
