@@ -318,6 +318,7 @@ main info section
 /*----------THIS-IS-THE-REPOSITORIES-THING----------*/
 /*****************************************************/
 .repo-block{
+  display: none;
   margin: 4% 0 0 0;
   border-style:none;
   border-color:lightgrey;
@@ -368,6 +369,7 @@ main info section
 /*****************************************************/
 
 .public-block{
+  display: none;
   margin: 4% 0 0 0;
   border-style:none;
   border-color:lightgrey;
