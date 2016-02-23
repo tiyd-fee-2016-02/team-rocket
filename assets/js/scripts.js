@@ -21,8 +21,6 @@ $(document).ready(function(){
     $( ".contributions-block" ).hide();
     $( ".repo-block" ).hide();
   });
-
-
 });
 
   // $( ".contributions-block" ).hide();
