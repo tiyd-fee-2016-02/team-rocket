@@ -100,6 +100,9 @@ $(document).ready(function(){
       $(".num-stars-5").html(json[0].stargazers_count);
 
 
+
+
+
       //for repos tab
       var timeUd1 = new Date(json[4].updated_at).toLocaleString();
       $(".num-forked-1").html(json[4].forks_count);
@@ -136,6 +139,7 @@ $(document).ready(function(){
       $(".repo-desc-5").html(json[0].description);
       $(".num-stars-r-5").html(json[0].stargazers_count);
       $(".repo-time-ud-5").html("Updated: "+timeUd5);
+
    })
 
 });
