@@ -77,30 +77,56 @@ $(document).ready(function(){
       // $(".followingg").html(tempFollowing);
    });
 
-   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+   $.getJSON("https://api.github.com/users/byrondevonwall/repos", function(json){
      console.log(_.size(json));
       ///for 'popular repos' tab
-      $(".repo-name-1").html(json[4].name);
-      $(".repo-content-1").html(json[4].description);
-      $(".num-stars-1").html(json[4].stargazers_count);
+      // $(".repo-name-1").html(json[4].name);
+      // $(".repo-content-1").html(json[4].description);
+      // $(".num-stars-1").html(json[4].stargazers_count);
+      //
+      // $(".repo-name-2").html(json[2].name);
+      // $(".repo-content-2").html(json[2].description);
+      // $(".num-stars-2").html(json[2].stargazers_count);
+      //
+      // $(".repo-name-3").html(json[1].name);
+      // $(".repo-content-3").html(json[1].description);
+      // $(".num-stars-3").html(json[1].stargazers_count);
+      //
+      // $(".repo-name-4").html(json[3].name);
+      // $(".repo-content-4").html(json[3].description);
+      // $(".num-stars-4").html(json[3].stargazers_count);
+      //
+      // $(".repo-name-5").html(json[0].name);
+      // $(".repo-content-5").html(json[0].description);
+      // $(".num-stars-5").html(json[0].stargazers_count);
 
-      $(".repo-name-2").html(json[2].name);
-      $(".repo-content-2").html(json[2].description);
-      $(".num-stars-2").html(json[2].stargazers_count);
+      var counter = _.size(json);
+      function sortByProperty(property) {
+        'use strict';
+        return function (a, b) {
+         var sortStatus = 0;
+         if (a[property] < b[property]) {
+             sortStatus = -1;
+         } else if (a[property] > b[property]) {
+             sortStatus = 1;
+         }
+         return sortStatus;
+       };
+     }
 
-      $(".repo-name-3").html(json[1].name);
-      $(".repo-content-3").html(json[1].description);
-      $(".num-stars-3").html(json[1].stargazers_count);
-
-      $(".repo-name-4").html(json[3].name);
-      $(".repo-content-4").html(json[3].description);
-      $(".num-stars-4").html(json[3].stargazers_count);
-
-      $(".repo-name-5").html(json[0].name);
-      $(".repo-content-5").html(json[0].description);
-      $(".num-stars-5").html(json[0].stargazers_count);
-
-
+     json.sort(sortByProperty('stargazers_count'));
+     if(counter-1 <= 5){
+       for(var i = counter-1; i>=0; i--){
+         console.log(i);
+         $(".contrib-block").append('<div class="repository"><span class="octicon octicon-repo"></span><span class="repo-text"><a class="repo-name-1" href="#">'+json[i].name+'</a><p class="repo-content-1">'+json[i].description+'</p></span><div class="stars"><div class="num-stars num-stars-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div></div></div>');
+     }
+   }
+     else if(counter-1 > 5){
+       for(var i = counter-1; i>=counter-5; i--){
+         console.log(i);
+         $(".contrib-block").append('<div class="repository"><span class="octicon octicon-repo"></span><span class="repo-text"><a class="repo-name-1" href="#">'+json[i].name+'</a><p class="repo-content-1">'+json[i].description+'</p></span><div class="stars"><div class="num-stars num-stars-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div></div></div>');
+     }
+    }
 
 
 
@@ -142,13 +168,27 @@ $(document).ready(function(){
       // $(".repo-time-ud-5").html("Updated: "+timeUd5);
    });
 
-   $.getJSON("https://api.github.com/users/alexanderallis/repos", function(json){
+
+   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
      var counter = _.size(json);
+     //this code via tori from http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
+     function sortByProperty(property) {
+       'use strict';
+       return function (a, b) {
+        var sortStatus = 0;
+        if (a[property] < b[property]) {
+            sortStatus = -1;
+        } else if (a[property] > b[property]) {
+            sortStatus = 1;
+        }
+        return sortStatus;
+      };
+    }
+
+    json.sort(sortByProperty('updated_at'));
 
      for(var i = counter-1; i>=0; i--){
-       console.log(json[i]);
-
-       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1">'+Date(json[i].updated_at).toLocaleString()+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
+       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1">'+json[i].updated_at+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
      };
    });
 
