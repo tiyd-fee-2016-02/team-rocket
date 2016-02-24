@@ -168,6 +168,7 @@ $(document).ready(function(){
       // $(".repo-time-ud-5").html("Updated: "+timeUd5);
    });
 
+
    $.getJSON("https://api.github.com/users/octocat/repos", function(json){
      var counter = _.size(json);
      //this code via tori from http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
