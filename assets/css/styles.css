@@ -382,12 +382,14 @@ main info section
 .num-forked{
   display: inline-block;
   vertical-align: middle;
+  /*padding: 0 1% 0 0;*/
 }
 
 .octicon-git-branch{
   color:grey;
   display: inline-block;
   vertical-align: middle;
+  padding: -1%;
 }
 
 /*****************************************************/
