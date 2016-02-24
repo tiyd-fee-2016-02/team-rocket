@@ -77,6 +77,8 @@ $(document).ready(function(){
    });
 
    $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+
+      ///for 'popular repos' tab
       $(".repo-name-1").html(json[4].name);
       $(".repo-content-1").html(json[4].description);
       $(".num-stars-1").html(json[4].stargazers_count);
@@ -93,6 +95,12 @@ $(document).ready(function(){
       $(".repo-content-5").html(json[0].description);
       $(".num-stars-5").html(json[0].stargazers_count);
 
+
+      //for repos tab
+      $("num-forked-1").html(json[0].forks_count);
+      $(".rep-name-1").html(json[0].name);
+      $(".repo-content-1").html(json[0].description);
+      $(".num-stars-1").html(json[0].stargazers_count);
    })
 
 });
