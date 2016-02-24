@@ -378,6 +378,11 @@ main info section
   color:grey;
   font-weight:200;
 }
+.octicon-git-branch{
+  color:grey;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 /*****************************************************/
 /*----------THIS-IS-THE-PUBLIC-THING----------*/
