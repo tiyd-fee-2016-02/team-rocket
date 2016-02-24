@@ -300,9 +300,9 @@ main info section
 .num-stars{
   display: inline-block;
   vertical-align: middle;
-  border-style: solid;
+  /*border-style: solid;
   border-color:lightgrey;
-  border-width:thin;
+  border-width:thin;*/
 }
 
 .octicon-star{
