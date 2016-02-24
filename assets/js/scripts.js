@@ -142,7 +142,7 @@ $(document).ready(function(){
       // $(".repo-time-ud-5").html("Updated: "+timeUd5);
    });
 
-   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+   $.getJSON("https://api.github.com/users/alexanderallis/repos", function(json){
      var counter = _.size(json);
 
      for(var i = counter-1; i>=0; i--){
