@@ -122,6 +122,7 @@ $(document).ready(function(){
       $(".num-stars-r-3").html(json[2].stargazers_count);
       $(".repo-time-ud-3").html("Updated: "+timeUd3);
 
+
       var timeUd4 = new Date(json[1].updated_at).toLocaleString();
       $(".num-forked-4").html(json[1].forks_count);
       $(".rep-name-4").html(json[1].name);
