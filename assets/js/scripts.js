@@ -23,7 +23,7 @@ $(document).ready(function(){
   });
 
 
-   $.getJSON( "https://api.github.com/users/OCTOCAT", function( json ) {
+   $.getJSON( "https://api.github.com/users/octocat", function( json ) {
      var time = new Date(json.created_at).toLocaleDateString();
 
       // $(".usr-img").append('<img src="'+json.avatar_url+'" alt="avatar"></img>')
