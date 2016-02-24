@@ -100,6 +100,7 @@ user info section
 .organization{
   margin-top:4%;
 }
+
 .user-info .octicon{
   color:grey;
   padding-right:.3em;
@@ -330,21 +331,35 @@ main info section
 }
 
 .find-repositories{
-  background-color:none;
+  /*background-color:#F5F5F5;*/
   display:inline-block;
   width:100%;
   border-bottom: solid thin lightgrey;
 }
 
+.repo-search{
+  margin: 0 0 2% 0;
+  width: 30%;
+  line-height: 3em;
+  border-radius: .3em;
+  border: solid thin lightgrey;
+}
+
+.repo-search-btn input [type=submit]{
+  padding: 200px;
+}
+
 
 .repository-right{
   float:right;
-  display:inline-block;
+  display:inline;
 }
 
 .repository-right div {
   display: inline-block;
-  float:right;
+  /*float:right;*/
+  font-size: .9em;
+  line-height: 3em;
 }
 
 .repository{
