@@ -116,6 +116,17 @@ $(document).ready(function(){
       $(".rep-name-3").html(json[2].name);
       $(".repo-desc-3").html(json[2].description);
       $(".num-stars-r-3").html(json[2].stargazers_count);
+
+
+      $(".num-forked-4").html(json[1].forks_count);
+      $(".rep-name-4").html(json[1].name);
+      $(".repo-desc-4").html(json[1].description);
+      $(".num-stars-r-4").html(json[1].stargazers_count);
+
+      $(".num-forked-5").html(json[0].forks_count);
+      $(".rep-name-5").html(json[0].name);
+      $(".repo-desc-5").html(json[0].description);
+      $(".num-stars-r-5").html(json[0].stargazers_count);
    })
 
 });
