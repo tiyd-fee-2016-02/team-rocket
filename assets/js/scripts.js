@@ -23,8 +23,9 @@ $(document).ready(function(){
   });
 
 
-   $.getJSON( "https://api.github.com/users/byrondevonwall", function( json ) {
+   $.getJSON( "https://api.github.com/users/octocat", function( json ) {
      var time = new Date(json.created_at).toLocaleDateString();
+     console.log(_.size(json));
 
       $(".usr-img").append('<img src="'+json.avatar_url+'" alt="avatar"></img>')
       $(".my-name").html(json.name);
@@ -76,8 +77,8 @@ $(document).ready(function(){
       // $(".followingg").html(tempFollowing);
    });
 
-   $.getJSON("https://api.github.com/users/byrondevonwall/repos", function(json){
-
+   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+     console.log(_.size(json));
       ///for 'popular repos' tab
       $(".repo-name-1").html(json[4].name);
       $(".repo-content-1").html(json[4].description);
@@ -104,42 +105,51 @@ $(document).ready(function(){
 
 
       //for repos tab
-      var timeUd1 = new Date(json[4].updated_at).toLocaleString();
-      $(".num-forked-1").html(json[4].forks_count);
-      $(".rep-name-1").html(json[4].name);
-      $(".repo-desc-1").html(json[4].description);
-      $(".num-stars-r-1").html(json[4].stargazers_count);
-      $(".repo-time-ud-1").html("Updated: "+timeUd1);
+      // var timeUd1 = new Date(json[4].updated_at).toLocaleString();
+      // $(".num-forked-1").html(json[4].forks_count);
+      // $(".rep-name-1").html(json[4].name);
+      // $(".repo-desc-1").html(json[4].description);
+      // $(".num-stars-r-1").html(json[4].stargazers_count);
+      // $(".repo-time-ud-1").html("Updated: "+timeUd1);
+      //
+      // var timeUd2 = new Date(json[3].updated_at).toLocaleString();
+      // $(".num-forked-2").html(json[3].forks_count);
+      // $(".rep-name-2").html(json[3].name);
+      // $(".repo-desc-2").html(json[3].description);
+      // $(".num-stars-r-2").html(json[3].stargazers_count);
+      // $(".repo-time-ud-2").html("Updated: "+timeUd2);
+      //
+      // var timeUd3 = new Date(json[2].updated_at).toLocaleString();
+      // $(".num-forked-3").html(json[2].forks_count);
+      // $(".rep-name-3").html(json[2].name);
+      // $(".repo-desc-3").html(json[2].description);
+      // $(".num-stars-r-3").html(json[2].stargazers_count);
+      // $(".repo-time-ud-3").html("Updated: "+timeUd3);
+      //
+      //
+      // var timeUd4 = new Date(json[1].updated_at).toLocaleString();
+      // $(".num-forked-4").html(json[1].forks_count);
+      // $(".rep-name-4").html(json[1].name);
+      // $(".repo-desc-4").html(json[1].description);
+      // $(".num-stars-r-4").html(json[1].stargazers_count);
+      // $(".repo-time-ud-4").html("Updated: "+timeUd4);
+      //
+      // var timeUd5 = new Date(json[0].updated_at).toLocaleString();
+      // $(".num-forked-5").html(json[0].forks_count);
+      // $(".rep-name-5").html(json[0].name);
+      // $(".repo-desc-5").html(json[0].description);
+      // $(".num-stars-r-5").html(json[0].stargazers_count);
+      // $(".repo-time-ud-5").html("Updated: "+timeUd5);
+   });
 
-      var timeUd2 = new Date(json[3].updated_at).toLocaleString();
-      $(".num-forked-2").html(json[3].forks_count);
-      $(".rep-name-2").html(json[3].name);
-      $(".repo-desc-2").html(json[3].description);
-      $(".num-stars-r-2").html(json[3].stargazers_count);
-      $(".repo-time-ud-2").html("Updated: "+timeUd2);
+   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+     var counter = _.size(json);
 
-      var timeUd3 = new Date(json[2].updated_at).toLocaleString();
-      $(".num-forked-3").html(json[2].forks_count);
-      $(".rep-name-3").html(json[2].name);
-      $(".repo-desc-3").html(json[2].description);
-      $(".num-stars-r-3").html(json[2].stargazers_count);
-      $(".repo-time-ud-3").html("Updated: "+timeUd3);
+     for(var i = counter-1; i>=0; i--){
+       console.log(json[i]);
 
-
-      var timeUd4 = new Date(json[1].updated_at).toLocaleString();
-      $(".num-forked-4").html(json[1].forks_count);
-      $(".rep-name-4").html(json[1].name);
-      $(".repo-desc-4").html(json[1].description);
-      $(".num-stars-r-4").html(json[1].stargazers_count);
-      $(".repo-time-ud-4").html("Updated: "+timeUd4);
-
-      var timeUd5 = new Date(json[0].updated_at).toLocaleString();
-      $(".num-forked-5").html(json[0].forks_count);
-      $(".rep-name-5").html(json[0].name);
-      $(".repo-desc-5").html(json[0].description);
-      $(".num-stars-r-5").html(json[0].stargazers_count);
-      $(".repo-time-ud-5").html("Updated: "+timeUd5);
-
-   })
+       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1">'+Date(json[i].updated_at).toLocaleString()+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
+     };
+   });
 
 });
