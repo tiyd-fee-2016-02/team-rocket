@@ -300,7 +300,7 @@ main info section
 .num-stars{
   display: inline-block;
   vertical-align: middle;
-  border-style: none;
+  border-style: solid;
   border-color:lightgrey;
   border-width:thin;
 }
@@ -310,7 +310,7 @@ main info section
   display: inline-block;
   vertical-align: middle;
   border-style: none;
-  border-color:lightgrey;
+  border-color:red;
   border-width:thin;
 }
 
@@ -378,6 +378,12 @@ main info section
   color:grey;
   font-weight:200;
 }
+
+.num-forked-1{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .octicon-git-branch{
   color:grey;
   display: inline-block;

@@ -97,9 +97,9 @@ $(document).ready(function(){
 
 
       //for repos tab
-      $("num-forked-1").html(json[0].forks_count);
+      $(".num-forked-1").html(json[0].forks_count);
       $(".rep-name-1").html(json[0].name);
-      $(".repo-content-1").html(json[0].description);
+      $(".repo-desc-1").html(json[0].description);
       $(".num-stars-1").html(json[0].stargazers_count);
    })
 
