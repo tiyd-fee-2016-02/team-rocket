@@ -188,7 +188,8 @@ $(document).ready(function(){
     json.sort(sortByProperty('updated_at'));
 
      for(var i = counter-1; i>=0; i--){
-       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1">'+json[i].updated_at+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
+       var timeUd = new Date(json[i].updated_at).toLocaleString();
+       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1"> Updated at '+timeUd+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
      };
    });
 
