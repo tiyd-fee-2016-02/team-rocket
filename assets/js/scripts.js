@@ -82,25 +82,39 @@ $(document).ready(function(){
       $(".repo-name-1").html(json[4].name);
       $(".repo-content-1").html(json[4].description);
       $(".num-stars-1").html(json[4].stargazers_count);
+
       $(".repo-name-2").html(json[2].name);
       $(".repo-content-2").html(json[2].description);
       $(".num-stars-2").html(json[2].stargazers_count);
+
       $(".repo-name-3").html(json[1].name);
       $(".repo-content-3").html(json[1].description);
       $(".num-stars-3").html(json[1].stargazers_count);
+
       $(".repo-name-4").html(json[3].name);
       $(".repo-content-4").html(json[3].description);
       $(".num-stars-4").html(json[3].stargazers_count);
+
       $(".repo-name-5").html(json[0].name);
       $(".repo-content-5").html(json[0].description);
       $(".num-stars-5").html(json[0].stargazers_count);
 
 
       //for repos tab
-      $("num-forked-1").html(json[0].forks_count);
-      $(".rep-name-1").html(json[0].name);
-      $(".repo-content-1").html(json[0].description);
-      $(".num-stars-1").html(json[0].stargazers_count);
+      $(".num-forked-1").html(json[4].forks_count);
+      $(".rep-name-1").html(json[4].name);
+      $(".repo-desc-1").html(json[4].description);
+      $(".num-stars-r-1").html(json[4].stargazers_count);
+
+      $(".num-forked-2").html(json[3].forks_count);
+      $(".rep-name-2").html(json[3].name);
+      $(".repo-desc-2").html(json[3].description);
+      $(".num-stars-r-2").html(json[3].stargazers_count);
+
+      $(".num-forked-3").html(json[2].forks_count);
+      $(".rep-name-3").html(json[2].name);
+      $(".repo-desc-3").html(json[2].description);
+      $(".num-stars-r-3").html(json[2].stargazers_count);
    })
 
 });
