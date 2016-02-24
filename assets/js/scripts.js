@@ -77,7 +77,7 @@ $(document).ready(function(){
       // $(".followingg").html(tempFollowing);
    });
 
-   $.getJSON("https://api.github.com/users/byrondevonwall/repos", function(json){
+   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
      console.log(_.size(json));
       ///for 'popular repos' tab
       // $(".repo-name-1").html(json[4].name);
@@ -168,7 +168,7 @@ $(document).ready(function(){
       // $(".repo-time-ud-5").html("Updated: "+timeUd5);
    });
 
-   $.getJSON("https://api.github.com/users/byrondevonwall/repos", function(json){
+   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
      var counter = _.size(json);
      //this code via tori from http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
      function sortByProperty(property) {
