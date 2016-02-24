@@ -83,13 +83,13 @@ $(document).ready(function(){
       $(".repo-name-2").html(json[3].name);
       $(".repo-content-2").html(json[3].description);
       $(".num-stars-2").html(json[3].stargazers_count);
-      $("repo-name-3").html(json[2].name);
+      $(".repo-name-3").html(json[2].name);
       $(".repo-content-3").html(json[2].description);
       $(".num-stars-3").html(json[2].stargazers_count);
-      $("repo-name-4").html(json[1].name);
+      $(".repo-name-4").html(json[1].name);
       $(".repo-content-4").html(json[1].description);
       $(".num-stars-4").html(json[1].stargazers_count);
-      $("repo-name-5").html(json[0].name);
+      $(".repo-name-5").html(json[0].name);
       $(".repo-content-5").html(json[0].description);
       $(".num-stars-5").html(json[0].stargazers_count);
 
