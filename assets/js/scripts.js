@@ -139,13 +139,26 @@ $(document).ready(function(){
       // $(".repo-time-ud-5").html("Updated: "+timeUd5);
    });
 
-   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+   $.getJSON("https://api.github.com/users/byrondevonwall/repos", function(json){
      var counter = _.size(json);
+     //this code via tori from http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
+     function sortByProperty(property) {
+       'use strict';
+       return function (a, b) {
+        var sortStatus = 0;
+        if (a[property] < b[property]) {
+            sortStatus = -1;
+        } else if (a[property] > b[property]) {
+            sortStatus = 1;
+        }
+        return sortStatus;
+      };
+    }
+
+    json.sort(sortByProperty('updated_at'));
 
      for(var i = counter-1; i>=0; i--){
-       console.log(json[i]);
-
-       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1">'+Date(json[i].updated_at).toLocaleString()+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
+       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1">'+json[i].updated_at+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
      };
    });
 
