@@ -1,7 +1,7 @@
 $(document).ready(function(){
   'use strict';
-  // var userInfo = "https://api.github.com/users/octocat";
-  // var userRepo = "https://api.github.com/users/octocat/repos";
+  var userInfo = "https://api.github.com/users/octocat";
+  var userRepo = "https://api.github.com/users/octocat/repos";
   $( ".contributions" ).click(function() {
     $(".tab").removeClass("clicked");
     $( this ).addClass( "clicked" );
@@ -29,13 +29,25 @@ $(document).ready(function(){
         var userRepo = "https://api.github.com/users/"+$(this).val()+"/repos";
         console.log(userInfo);
         console.log(userRepo);
+        $.getJSON((userInfo), update);
+        $.getJSON((userRepo), update);
         // location.reload();
     }
   });
-
+  //this code via tori from http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
+  function sortByProperty(property) {
+    return function (a, b) {
+     var sortStatus = 0;
+     if (a[property] < b[property]) {
+         sortStatus = -1;
+     } else if (a[property] > b[property]) {
+         sortStatus = 1;
+     }
+     return sortStatus;
+   };
+ };
    $.getJSON( "https://api.github.com/users/octocat", function( json ) {
      var time = new Date(json.created_at).toLocaleDateString();
-    //  console.log(_.size(json));
     // console.log(userInfo);
 
       $(".usr-img").append('<img src="'+json.avatar_url+'" alt="avatar"></img>')
@@ -51,19 +63,7 @@ $(document).ready(function(){
    });
 
    $.getJSON("https://api.github.com/users/octocat/repos", function(json){
-   //this code via tori from http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
       var counter = _.size(json);
-      function sortByProperty(property) {
-        return function (a, b) {
-         var sortStatus = 0;
-         if (a[property] < b[property]) {
-             sortStatus = -1;
-         } else if (a[property] > b[property]) {
-             sortStatus = 1;
-         }
-         return sortStatus;
-       };
-     }
 
      json.sort(sortByProperty('stargazers_count'));
      if(counter-1 <= 5){
@@ -81,18 +81,6 @@ $(document).ready(function(){
 
    $.getJSON("https://api.github.com/users/byrondevonwall/repos", function(json){
      var counter = _.size(json);
-     //this code via tori from http://www.levihackwith.com/code-snippet-how-to-sort-an-array-of-json-objects-by-property/
-     function sortByProperty(property) {
-       return function (a, b) {
-        var sortStatus = 0;
-        if (a[property] < b[property]) {
-            sortStatus = -1;
-        } else if (a[property] > b[property]) {
-            sortStatus = 1;
-        }
-        return sortStatus;
-      };
-    }
 
     json.sort(sortByProperty('updated_at'));
 
