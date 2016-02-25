@@ -48,7 +48,7 @@ $(document).ready(function(){
  };
 
    $.getJSON( userInfo, function( json ) {
-     var time = new Date(json.created_at).toLocaleDateString();
+     var time = new Date(json.created_at).toLocaleDateString('en-US',{month:"short", day:"2-digit", year: "numeric"});
     // console.log(userInfo);
 
       $(".usr-img").append('<img src="'+json.avatar_url+'" alt="avatar"></img>')
@@ -87,8 +87,8 @@ $(document).ready(function(){
     json.sort(sortByProperty('updated_at'));
 
      for(var i = counter-1; i>=0; i--){
-       var timeUd = new Date(json[i].updated_at).toLocaleString();
-       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="'+json[i].html_url+'" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1"> Updated at '+timeUd+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
+       var timeUd = new Date(json[i].updated_at).toLocaleString('en-US',{month: "short", day: '2-digit', year: 'numeric' });
+       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="'+json[i].html_url+'" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1"> Updated on '+timeUd+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
      };
    });
 
