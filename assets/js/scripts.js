@@ -1,5 +1,7 @@
 $(document).ready(function(){
   'use strict';
+  // var userInfo = "https://api.github.com/users/octocat";
+  // var userRepo = "https://api.github.com/users/octocat/repos";
   $( ".contributions" ).click(function() {
     $(".tab").removeClass("clicked");
     $( this ).addClass( "clicked" );
@@ -21,11 +23,20 @@ $(document).ready(function(){
     $( ".contributions-block" ).hide();
     $( ".repo-block" ).hide();
   });
-
+  $(".git-search").on("keydown",function search(e) {
+    if(e.keyCode == 13) {
+        var userInfo = "https://api.github.com/users/"+$(this).val();
+        var userRepo = "https://api.github.com/users/"+$(this).val()+"/repos";
+        console.log(userInfo);
+        console.log(userRepo);
+        // location.reload();
+    }
+  });
 
    $.getJSON( "https://api.github.com/users/octocat", function( json ) {
      var time = new Date(json.created_at).toLocaleDateString();
-     console.log(_.size(json));
+    //  console.log(_.size(json));
+    // console.log(userInfo);
 
       $(".usr-img").append('<img src="'+json.avatar_url+'" alt="avatar"></img>')
       $(".my-name").html(json.name);
