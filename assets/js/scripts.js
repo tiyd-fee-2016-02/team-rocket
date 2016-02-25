@@ -70,12 +70,12 @@ $(document).ready(function(){
      json.sort(sortByProperty('stargazers_count'));
      if(counter-1 <= 5){
        for(var i = counter-1; i>=0; i--){
-         $(".contrib-block").append('<div class="repository"><span class="octicon octicon-repo"></span><span class="repo-text"><a class="repo-name-1" href="#">'+json[i].name+'</a><p class="repo-content-1">'+json[i].description+'</p></span><div class="stars"><div class="num-stars num-stars-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div></div></div>');
+         $(".contrib-block").append('<div class="repository"><span class="octicon octicon-repo"></span><span class="repo-text"><a class="repo-name-1" href="'+json[i].html_url+'">'+json[i].name+'</a><p class="repo-content-1">'+json[i].description+'</p></span><div class="stars"><div class="num-stars num-stars-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div></div></div>');
      }
    }
      else if(counter-1 > 5){
        for(var i = counter-1; i>=counter-5; i--){
-         $(".contrib-block").append('<div class="repository"><span class="octicon octicon-repo"></span><span class="repo-text"><a class="repo-name-1" href="#">'+json[i].name+'</a><p class="repo-content-1">'+json[i].description+'</p></span><div class="stars"><div class="num-stars num-stars-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div></div></div>');
+         $(".contrib-block").append('<div class="repository"><span class="octicon octicon-repo"></span><span class="repo-text"><a class="repo-name-1" href="'+json[i].html_url+'">'+json[i].name+'</a><p class="repo-content-1">'+json[i].description+'</p></span><div class="stars"><div class="num-stars num-stars-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div></div></div>');
      }
     }
    });
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
      for(var i = counter-1; i>=0; i--){
        var timeUd = new Date(json[i].updated_at).toLocaleString();
-       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="#" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1"> Updated at '+timeUd+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
+       $(".repo-block-test").append('<div class="repository"><span class="repo-text"><a href="'+json[i].html_url+'" class="rep-name-1">'+json[i].name+'</a><p class="repo-desc-1">'+json[i].description+'</p><h3 class="repo-time-ud-1"> Updated at '+timeUd+'</h3></span><div class="stars"><div class="num-stars num-stars-r-1">'+json[i].stargazers_count+'</div><div class="octicon octicon-star"></div><div class="num-forked num-forked-1">'+json[i].forks_count+'</div><span class="octicon octicon-git-branch"></span></div></div>');
      };
    });
 
