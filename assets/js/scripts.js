@@ -1,7 +1,6 @@
 $(document).ready(function(){
   'use strict';
-  var userInfo = "https://api.github.com/users/octocat";
-  var userRepo = "https://api.github.com/users/octocat/repos";
+
   $( ".contributions" ).click(function() {
     $(".tab").removeClass("clicked");
     $( this ).addClass( "clicked" );
@@ -23,14 +22,15 @@ $(document).ready(function(){
     $( ".contributions-block" ).hide();
     $( ".repo-block" ).hide();
   });
+
+  var userInfo = "https://api.github.com/users/octocat";
+  var userRepo = "https://api.github.com/users/octocat/repos";
   $(".git-search").on("keydown",function search(e) {
     if(e.keyCode == 13) {
         var userInfo = "https://api.github.com/users/"+$(this).val();
         var userRepo = "https://api.github.com/users/"+$(this).val()+"/repos";
         console.log(userInfo);
         console.log(userRepo);
-        $.getJSON((userInfo), update);
-        $.getJSON((userRepo), update);
         // location.reload();
     }
   });
@@ -46,7 +46,8 @@ $(document).ready(function(){
      return sortStatus;
    };
  };
-   $.getJSON( "https://api.github.com/users/octocat", function( json ) {
+
+   $.getJSON( userInfo, function( json ) {
      var time = new Date(json.created_at).toLocaleDateString();
     // console.log(userInfo);
 
@@ -60,9 +61,10 @@ $(document).ready(function(){
       $(".joined").html(time);
       $(".follows").html(json.followers);
       $(".followingg").html(json.following);
-   });
 
-   $.getJSON("https://api.github.com/users/octocat/repos", function(json){
+
+   });
+   $.getJSON(userRepo, function(json){
       var counter = _.size(json);
 
      json.sort(sortByProperty('stargazers_count'));
@@ -79,7 +81,7 @@ $(document).ready(function(){
    });
 
 
-   $.getJSON("https://api.github.com/users/byrondevonwall/repos", function(json){
+   $.getJSON(userRepo, function(json){
      var counter = _.size(json);
 
     json.sort(sortByProperty('updated_at'));
